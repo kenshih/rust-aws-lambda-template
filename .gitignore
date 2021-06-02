@@ -1,0 +1,10 @@
+# build artifacts
+/target
+# needed linker in this dir for macos
+.cargo
+Cargo.lock
+# deploy artifact location based on README directions
+infra/lambda.zip
+# example location for env variables in README directions
+.local_env
+
