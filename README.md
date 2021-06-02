@@ -1,5 +1,7 @@
 # rust-aws-sqs-lambda-template
 
+Status: _In Development_
+
 A [cargo-generate](https://github.com/cargo-generate/cargo-generate) Template.
 
 "hello world" which contains deps to pull off sqs message with a lambda.
@@ -10,15 +12,28 @@ no optimizations of sqs and lambda are introduced here, only the most basic conn
 
 - [rust-aws-sqs-lambda-template](#rust-aws-sqs-lambda-template)
 - [table of contents](#table-of-contents)
-- [getting started](#getting-started)
+- [Getting started](#getting-started)
+  - [Prerequites](#prerequites)
+  - [Create your project](#create-your-project)
+  - [Deploy your "hello world"](#deploy-your-hello-world)
 - [notes](#notes)
 
-# getting started
+# Getting started
+## Prerequites
+* rust
+* cargo
 
-To use:
-* install [cargo-generate](https://github.com/cargo-generate/cargo-generate)
+## Create your project
+1. install [cargo-generate](https://github.com/cargo-generate/cargo-generate):
+```
+cargo install cargo-generate
+```
+2. create your new project!
+```
+cargo generate --git https://github.com/kenshih/rust-aws-sqs-lambda-template --name <my-project-name>
+```
 
-
+## Deploy your "hello world"
 ```
 # file: .local_env
 export AWS_ACCESS_KEY_ID=...
