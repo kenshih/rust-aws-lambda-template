@@ -1,0 +1,16 @@
+version = 0.1
+
+# consider adding a 'prod' profile,
+# when ready to release to prod location
+[default.deploy]
+[default.deploy.parameters]
+region = "us-east-1"
+s3_bucket = "sam-artifacts-212646169882-us-east-1"
+s3_prefix = "ken-rust-lambda-dev"
+stack_name = "ken-rust-lambda-dev"
+capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND"
+parameter_overrides = [
+    "FunctionName=ken-rust-lambda-dev"
+]
+fail_on_empty_changeset = false
+tags = "mup:owner=\"notifications\""
