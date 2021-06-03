@@ -15,4 +15,6 @@ prompt = "AWS_ACCOUNT_ID ?"
 default = "warning-no-account-id"
 
 [placeholders.aws_tags]
-generatedBy=\"https://github.com/kenshih/rust-aws-sqs-lambda-template\"
+type = "string"
+prompt = "aws_tags ?"
+default = 'generatedBy=\"https://github.com/kenshih/rust-aws-sqs-lambda-template\"'
