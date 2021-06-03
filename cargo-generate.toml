@@ -12,4 +12,4 @@ default = "warning-no-account-id"
 [placeholders.aws_tags]
 type = "string"
 prompt = "aws_tags ?"
-default = 'generatedBy=\"https://github.com/kenshih/rust-aws-sqs-lambda-template\"'
+default = 'generatedBy=\"https://github.com/kenshih/rust-aws-lambda-template\"'

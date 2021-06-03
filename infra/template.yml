@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 
-Description: cloudformation stack for {{project-name}} function and sqs queue
+Description: {{project-name}} function stack (AWS CloudFormation)
 
 Parameters:
   FunctionName:
@@ -22,13 +22,6 @@ Resources:
       MemorySize: 1024
       Timeout: 30
       Role: !GetAtt ServiceRole.Arn
-      # Events:
-      #   Dequeue:
-      #     Type: SQS
-      #     Properties:
-      #       Queue: !GetAtt SomeQueue.Arn
-      #       # NOTE: 10 is currently AWS' max value for this.
-      #       BatchSize: 1
   ServiceRole:
     Type: AWS::IAM::Role
     Properties:
@@ -42,6 +35,4 @@ Resources:
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
         - 'arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess'
-        #- 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
-        #- 'arn:aws:iam::aws:policy/service-role/AWSLambdaSQSQueueExecutionRole'
-        #- 'arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess'
+        # add more policies here if you need to do more e.g. SQS, ApiGateway

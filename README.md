@@ -1,7 +1,9 @@
-# {{project-name}} (generated from rust-aws-sqs-lambda-template)
+# {{project-name}}
+( generated from [rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) )
+
 Status:
 - Only supports lambda generation
-- TODO: not sqs yet
+- TODO: support sqs generation option
 - TODO: Local development not supported
 - TODO: doc: generate parameters
 - TODO: doc: gif of how to
@@ -12,17 +14,17 @@ A [cargo-generate](https://github.com/cargo-generate/cargo-generate) Template.
 
 "hello world" which contains deps to pull off sqs message with a lambda.
 
-no optimizations of sqs and lambda are introduced here, only the most basic connection
+no optimizations of lambda are introduced here, only the most basic connection
 
 # table of contents
 
-- [{{project-name}} (generated from rust-aws-sqs-lambda-template)](#project-name-generated-from-rust-aws-sqs-lambda-template)
+- [{{project-name}}](#project-name)
 - [table of contents](#table-of-contents)
 - [Getting started](#getting-started)
   - [Prerequites](#prerequites)
   - [Create your project](#create-your-project)
   - [Deploy your "hello world"](#deploy-your-hello-world)
-    - [cat deploy.sh:](#cat-deploysh)
+    - [`cat deploy.sh`](#cat-deploysh)
   - [Develop](#develop)
 - [notes](#notes)
 
@@ -38,7 +40,7 @@ cargo install cargo-generate
 ```
 2. create your new project!
 ```
-cargo generate --git https://github.com/kenshih/rust-aws-sqs-lambda-template --name <my-project-name>
+cargo generate --git https://github.com/kenshih/rust-aws-lambda-template --name <my-project-name>
 ```
 
 ## Deploy your "hello world"
@@ -52,7 +54,9 @@ $ echo $'[target.x86_64-unknown-linux-musl]\nlinker = "x86_64-linux-musl-gcc"' >
 ```
 2. run `deploy.sh` (should work on Mac/Linux, not tested on Windows)
 
-### cat deploy.sh:
+### `cat deploy.sh`
+This was added as a convenience to get you up-and-running. Consider adding this to your Makefile, preferred scripting language, etc.
+
 ```
 ## build binary executable
 cargo build --release --target x86_64-unknown-linux-musl
@@ -82,4 +86,4 @@ cargo run
 # notes
 
 - this is built using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
-- trying [aws-sdk-rust](https://github.com/awslabs/aws-sdk-rust) in favor of [rusoto](https://github.com/rusoto/rusoto)
+- using [aws-sdk-rust](https://github.com/awslabs/aws-sdk-rust) in favor of [rusoto](https://github.com/rusoto/rusoto)
