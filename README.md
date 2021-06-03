@@ -4,7 +4,7 @@
 
 If you are reading a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
 
-[![asciicast](https://asciinema.org/a/418133.svg)](https://asciinema.org/a/418133)
+<script id="asciicast-418133" src="https://asciinema.org/a/418133.js" async></script>
 
 # table of contents
 
