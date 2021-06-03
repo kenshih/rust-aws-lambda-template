@@ -3,6 +3,7 @@ Status:
 - Only supports lambda generation
 - TODO: not sqs yet
 - TODO: Local development not supported
+- TODO: doc: generate parameters
 - TODO: doc: gif of how to
 - TODO: doc: tear-down
 - TODO: doc: tour of generated items
