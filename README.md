@@ -1,5 +1,4 @@
-# rust-aws-sqs-lambda-template
-
+# {{project-name}} (generated from rust-aws-sqs-lambda-template)
 Status: _In Development_
 
 A [cargo-generate](https://github.com/cargo-generate/cargo-generate) Template.
@@ -10,12 +9,14 @@ no optimizations of sqs and lambda are introduced here, only the most basic conn
 
 # table of contents
 
-- [rust-aws-sqs-lambda-template](#rust-aws-sqs-lambda-template)
+- [{{project-name}} (generated from rust-aws-sqs-lambda-template)](#project-name-generated-from-rust-aws-sqs-lambda-template)
 - [table of contents](#table-of-contents)
 - [Getting started](#getting-started)
   - [Prerequites](#prerequites)
   - [Create your project](#create-your-project)
   - [Deploy your "hello world"](#deploy-your-hello-world)
+    - [cat deploy.sh:](#cat-deploysh)
+  - [Develop](#develop)
 - [notes](#notes)
 
 # Getting started
@@ -34,6 +35,25 @@ cargo generate --git https://github.com/kenshih/rust-aws-sqs-lambda-template --n
 ```
 
 ## Deploy your "hello world"
+
+1. Follow directions for setup from [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime), including MacOS setup if it applies to you.
+2. run `deploy.sh` (should work on Mac/Linux, not tested on Windows)
+
+### cat deploy.sh:
+```
+## build binary executable
+cargo build --release --target x86_64-unknown-linux-musl
+
+## pack binary executable up into deployment artifact
+cp ./target/x86_64-unknown-linux-musl/release/rust-aws-sqs-lambda-template ./bootstrap && zip lambda.zip bootstrap && rm bootstrap && mv lambda.zip infra/
+
+## with default AWS profile set/matching `source .local_env` (see .local_env above)
+cd infra; sam deploy; cd ..
+```
+
+## Develop
+
+**TODO: this currently doesn't work**
 ```
 # file: .local_env
 export AWS_ACCESS_KEY_ID=...
@@ -46,20 +66,6 @@ run hello world
 source .local_env
 cargo run
 ```
-
-Follow directions for setup from [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime), including MacOS setup if it applies to you.
-
-```
-## build binary executable
-cargo build --release --target x86_64-unknown-linux-musl
-
-## pack binary executable up into deployment artifact
-cp ./target/x86_64-unknown-linux-musl/release/rust-aws-sqs-lambda-template ./bootstrap && zip lambda.zip bootstrap && rm bootstrap && mv lambda.zip infra/
-
-## with default AWS profile set/matching `source .local_env` (see .local_env above)
-cd infra; sam deploy; cd ..
-```
-
 # notes
 
 - this is built using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
