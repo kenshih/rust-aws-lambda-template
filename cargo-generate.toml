@@ -9,11 +9,6 @@ type = "string"
 prompt = "AWS_ACCOUNT_ID ?"
 default = "warning-no-account-id"
 
-[placeholders.aws_account_id]
-type = "string"
-prompt = "AWS_ACCOUNT_ID ?"
-default = "warning-no-account-id"
-
 [placeholders.aws_tags]
 type = "string"
 prompt = "aws_tags ?"
