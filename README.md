@@ -25,6 +25,7 @@ no optimizations of lambda are introduced here, only the most basic connection
   - [Create your project](#create-your-project)
   - [Deploy your "hello world"](#deploy-your-hello-world)
     - [`cat deploy.sh`](#cat-deploysh)
+    - [clean up](#clean-up)
   - [Develop](#develop)
 - [notes](#notes)
 
@@ -66,6 +67,14 @@ cp ./target/x86_64-unknown-linux-musl/release/{{project-name}} ./bootstrap && zi
 
 ## with default AWS profile set/matching `source .local_env` (see .local_env above)
 cd infra; sam deploy; cd ..
+```
+
+### clean up
+
+At the time of this writing [aws-sam-cli](https://github.com/aws/aws-sam-cli) does not have [an "undeploy/destroy" option](https://github.com/aws/aws-sam-cli/issues/789). You can use AWS's standard [aws-cli](https://github.com/aws/aws-cli) instead like this:
+
+```
+aws cloudformation delete-stack --stack-name {{project-name}}
 ```
 
 ## Develop
