@@ -1,0 +1,18 @@
+[placeholders.aws_region]
+type = "string"
+prompt = "AWS_REGION ?"
+choices = ["us-east-1", "us-west-2"]
+default = "us-east-1"
+
+[placeholders.aws_account_id]
+type = "string"
+prompt = "AWS_ACCOUNT_ID ?"
+default = "warning-no-account-id"
+
+[placeholders.aws_account_id]
+type = "string"
+prompt = "AWS_ACCOUNT_ID ?"
+default = "warning-no-account-id"
+
+[placeholders.aws_tags]
+generatedBy=\"https://github.com/kenshih/rust-aws-sqs-lambda-template\"

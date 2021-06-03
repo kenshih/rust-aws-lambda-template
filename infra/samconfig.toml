@@ -4,8 +4,8 @@ version = 0.1
 # when ready to release to prod location
 [default.deploy]
 [default.deploy.parameters]
-region = "us-east-1"
-s3_bucket = "sam-artifacts-212646169882-us-east-1"
+region = "{{aws_region}}"
+s3_bucket = "sam-artifacts-{{aws_account_id}}-{{aws_region}}"
 s3_prefix = "{{project-name}}"
 stack_name = "{{project-name}}"
 capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND"
@@ -13,4 +13,4 @@ parameter_overrides = [
     "FunctionName={{project-name}}"
 ]
 fail_on_empty_changeset = false
-tags = "mup:owner=\"notifications\""
+tags = "{{aws_tags}}"
