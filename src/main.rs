@@ -10,5 +10,5 @@ async fn main() -> Result<(), Error> {
 }
 
 async fn func(event: Value, _: Context) -> Result<Value, Error> {
-    Ok(json!({ "message": format!("Hello, {}!", "Ken") }))
+    Ok(json!({ "message": format!("Hello, {}!", "{{project-name}}") }))
 }
