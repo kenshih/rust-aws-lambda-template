@@ -1,5 +1,11 @@
 # {{project-name}} (generated from rust-aws-sqs-lambda-template)
-Status: _In Development_
+Status:
+- Only supports lambda generation
+- TODO: not sqs yet
+- TODO: Local development not supported
+- TODO: doc: gif of how to
+- TODO: doc: tear-down
+- TODO: doc: tour of generated items
 
 A [cargo-generate](https://github.com/cargo-generate/cargo-generate) Template.
 
@@ -37,6 +43,12 @@ cargo generate --git https://github.com/kenshih/rust-aws-sqs-lambda-template --n
 ## Deploy your "hello world"
 
 1. Follow directions for setup from [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime), including MacOS setup if it applies to you.
+```
+# macOs setup
+$ brew install filosottile/musl-cross/musl-cross
+$ mkdir .cargo
+$ echo $'[target.x86_64-unknown-linux-musl]\nlinker = "x86_64-linux-musl-gcc"' > .cargo/config
+```
 2. run `deploy.sh` (should work on Mac/Linux, not tested on Windows)
 
 ### cat deploy.sh:
@@ -61,7 +73,7 @@ export AWS_SECRET_ACCESS_KEY=...
 export AWS_DEFAULT_REGION=us-east-1
 ```
 
-run hello world
+run locally:
 ```
 source .local_env
 cargo run
