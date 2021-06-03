@@ -10,12 +10,22 @@ No optimizations of lambda are introduced here, only the most basic connection t
 
 - [{{project-name}}](#project-name)
 - [table of contents](#table-of-contents)
-  - [Deploy your "hello world"](#deploy-your-hello-world)
-    - [`cat deploy.sh`](#cat-deploysh)
-    - [clean up](#clean-up)
-  - [Develop](#develop)
+- [What's in this project?](#whats-in-this-project)
+- [Deploy your "hello world"](#deploy-your-hello-world)
+  - [`cat deploy.sh`](#cat-deploysh)
+  - [clean up](#clean-up)
+- [Develop](#develop)
 
-## Deploy your "hello world"
+# What's in this project?
+
+file/dir | description
+--- | ---
+generated.README.md | starter readme (TODO rename to README.md)
+Cargo.toml | your rust project package management file used by [`cargo`](https://doc.rust-lang.org/cargo/)
+deploy.sh | a simple script to build lambda executable and deploy using [aws-sam-cli](https://github.com/aws/aws-sam-cli) based on sample from [rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template)
+infra/template.yml | used by [aws-sam-cli](https://github.com/aws/aws-sam-cli) to define what is being deployed to AWS
+infra/samconfig.toml | used by [aws-sam-cli](https://github.com/aws/aws-sam-cli) to configure your enviroment, profile, in order to deploy
+# Deploy your "hello world"
 
 1. Follow directions for setup from [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime), including MacOS setup if it applies to you, copied here for your convenience:
 ```
@@ -26,7 +36,7 @@ echo $'[target.x86_64-unknown-linux-musl]\nlinker = "x86_64-linux-musl-gcc"' > .
 ```
 2. run `deploy.sh` (should work on Mac/Linux, not tested on Windows)
 
-### `cat deploy.sh`
+## `cat deploy.sh`
 This was added as a convenience to get you up-and-running. Consider adding this to your Makefile, preferred scripting language, etc.
 
 ```
@@ -40,7 +50,7 @@ cp ./target/x86_64-unknown-linux-musl/release/{{project-name}} ./bootstrap && zi
 cd infra; sam deploy; cd ..
 ```
 
-### clean up
+## clean up
 
 At the time of this writing [aws-sam-cli](https://github.com/aws/aws-sam-cli) does not have [an "undeploy/destroy" option](https://github.com/aws/aws-sam-cli/issues/789). You can use AWS's standard [aws-cli](https://github.com/aws/aws-cli) instead like this:
 
@@ -48,7 +58,7 @@ At the time of this writing [aws-sam-cli](https://github.com/aws/aws-sam-cli) do
 aws cloudformation delete-stack --stack-name {{project-name}}
 ```
 
-## Develop
+# Develop
 
 **TODO: this currently doesn't work**
 ```
