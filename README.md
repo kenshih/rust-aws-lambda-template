@@ -7,7 +7,6 @@ Status:
 - TODO: Local development not supported
 - TODO: doc: generate parameters
 - TODO: doc: gif of how to
-- TODO: doc: tear-down
 - TODO: doc: tour of generated items
 
 A [cargo-generate](https://github.com/cargo-generate/cargo-generate) Template.
