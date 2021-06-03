@@ -4,6 +4,8 @@
 
 If you are reading a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
 
+[![asciicast](https://asciinema.org/a/418133.svg)](https://asciinema.org/a/418133)
+
 # table of contents
 
 - [rust-aws-lambda-template](#rust-aws-lambda-template)
@@ -40,7 +42,6 @@ cargo generate --git https://github.com/kenshih/rust-aws-lambda-template --name 
 - Supports lambda generation
 - For requests to support additional features consider opening an [issue](https://github.com/kenshih/rust-aws-lambda-template/issues)
 - TODO: Local development not supported
-- TODO: doc: gif of how to
 - TODO: doc: tour of generated items
 
 # notes
