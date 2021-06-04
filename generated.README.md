@@ -27,14 +27,24 @@ infra/template.yml | used by [aws-sam-cli](https://github.com/aws/aws-sam-cli) t
 infra/samconfig.toml | used by [aws-sam-cli](https://github.com/aws/aws-sam-cli) to configure your enviroment, profile, in order to deploy
 # Deploy your "hello world"
 
-1. Follow directions for setup from [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime), including MacOS setup if it applies to you, copied here for your convenience:
+Prerequisites:
+1. rust (perhaps via [rustup](https://rustup.rs/))
+2. [cargo](https://github.com/rust-lang/cargo/)
+3. Follow directions for setup from [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime), including MacOS setup if it applies to you, copied here for your convenience:
 ```
 # macOs setup
 brew install filosottile/musl-cross/musl-cross
 mkdir .cargo
-echo $'[target.x86_64-unknown-linux-musl]\nlinker = "x86_64-linux-musl-gcc"' > .cargo/config
+echo $'[target.x86_64-unknown-linux-musl]\nlinker = "x86_64-linux-musl-gcc"' >.cargo/config
 ```
-2. run `deploy.sh` (should work on Mac/Linux, not tested on Windows)
+4. An AWS account where we will use s3, lambda, and cloudformation
+5. [aws-sam-cli](https://github.com/aws/aws-sam-cli)
+6. Local AWS config with IAM Credentials (e.g. configured with `aws configure`)
+
+Assuming the above, you should just be able to:
+**run `deploy.sh`**
+to build and deploy a lambda
+(should work on Mac/Linux, not tested on Windows)
 
 ## `cat deploy.sh`
 This was added as a convenience to get you up-and-running. Consider adding this to your Makefile, preferred scripting language, etc.

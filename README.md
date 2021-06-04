@@ -1,8 +1,8 @@
 # rust-aws-lambda-template
 
-[rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) is a [cargo-generate](https://github.com/cargo-generate/cargo-generate) template, which creates a rust project that can deploy a "hello world" [AWS Lambda](https://aws.amazon.com/lambda/) using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime).
+[rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) is a [**cargo-generate**](https://github.com/cargo-generate/cargo-generate) template, which creates a rust project that can deploy a "hello world" [AWS Lambda](https://aws.amazon.com/lambda/) using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime).
 
-If you are reading a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
+If you are reading this from a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
 
 [![asciicast](https://asciinema.org/a/418133.svg)](https://asciinema.org/a/418133)
 
@@ -12,22 +12,24 @@ If you are reading a generated project simply overwrite this README.md with [gen
 - [table of contents](#table-of-contents)
 - [How to use this template](#how-to-use-this-template)
   - [Prerequisites](#prerequisites)
-  - [Create your project wit this template!](#create-your-project-wit-this-template)
+  - [Create your project with this template!](#create-your-project-with-this-template)
 - [Status of rust-aws-lambda-template](#status-of-rust-aws-lambda-template)
 - [notes](#notes)
 
 # How to use this template
 ## Prerequisites
 
+Prerequistes to create a project using this template:
 * rust (perhaps via [rustup](https://rustup.rs/))
 * [cargo](https://github.com/rust-lang/cargo/)
-
-## Create your project wit this template!
-1. install [cargo-generate](https://github.com/cargo-generate/cargo-generate):
+* [cargo-generate](https://github.com/cargo-generate/cargo-generate):
 ```
 cargo install cargo-generate
 ```
-2. create your new project!
+
+## Create your project with this template!
+
+* Run...
 ```
 cargo generate --git https://github.com/kenshih/rust-aws-lambda-template --name <my-project-name>
 
@@ -36,6 +38,8 @@ cargo generate --git https://github.com/kenshih/rust-aws-lambda-template --name 
 # AWS_ACCOUNT_ID - a numeric id of our AWS account
 # aws_tags - which are name/value strings like: name1=\"value1\" name2=\"value2\"
 ```
+* This will create `<my-project-name>` similar to `cargo new`, but with a deployable lambda
+* Setup and usage is covered in [generated.README.md](./generated.README.md)
 
 # Status of rust-aws-lambda-template
 
