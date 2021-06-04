@@ -9,6 +9,6 @@ async fn main() -> Result<(), Error> {
     Ok(())
 }
 
-async fn func(event: Value, _: Context) -> Result<Value, Error> {
+async fn func(_event: Value, _: Context) -> Result<Value, Error> {
     Ok(json!({ "message": format!("Hello, {}!", "{{project-name}}") }))
 }
