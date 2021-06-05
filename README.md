@@ -4,7 +4,7 @@
 
 If you are reading this from a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
 
-[![asciicast](https://asciinema.org/a/418133.svg)](https://asciinema.org/a/418133)
+![create-project-example](./create-project-example.svg)
 
 # table of contents
 

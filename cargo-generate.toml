@@ -1,3 +1,6 @@
+[template]
+exclude = ["create-project-example.svg"]
+
 [placeholders.aws_region]
 type = "string"
 prompt = "AWS_REGION"
