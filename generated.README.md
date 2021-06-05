@@ -1,6 +1,6 @@
 # {{project-name}}
 
-Quick start: In this project can build/deploy your AWS Lambda like this:
+Quick start: In this project can build/deploy/teardown your AWS Lambda like this:
 ![sample-deploy](./sample-deploy.svg)
 
 
