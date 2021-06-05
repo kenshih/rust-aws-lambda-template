@@ -1,21 +1,26 @@
 # rust-aws-lambda-template
 
-[rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) is a [**cargo-generate**](https://github.com/cargo-generate/cargo-generate) template, which creates a rust project that can deploy a "hello world" [AWS Lambda](https://aws.amazon.com/lambda/) using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime).
-
-If you are reading this from a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
-
+Use this template like this, to create your project:
 ![create-project-example](./create-project-example.svg)
+
+Then, in your new project, you can deploy your AWS Lambda like this:
+![sample-deploy](./sample-deploy.svg)
 
 # table of contents
 
 - [rust-aws-lambda-template](#rust-aws-lambda-template)
 - [table of contents](#table-of-contents)
+- [Overview](#overview)
 - [How to use this template](#how-to-use-this-template)
   - [Prerequisites](#prerequisites)
   - [Create your project with this template!](#create-your-project-with-this-template)
 - [Status of rust-aws-lambda-template](#status-of-rust-aws-lambda-template)
 - [notes](#notes)
 
+# Overview
+[rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) is a [**cargo-generate**](https://github.com/cargo-generate/cargo-generate) template, which creates a rust project that can deploy a "hello world" [AWS Lambda](https://aws.amazon.com/lambda/) using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime).
+
+If you are reading this from a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
 # How to use this template
 ## Prerequisites
 

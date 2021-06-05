@@ -1,5 +1,9 @@
 # {{project-name}}
 
+Quick start: In this project can build/deploy your AWS Lambda like this:
+![sample-deploy](./sample-deploy.svg)
+
+
 This project was generated from [rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template), a [cargo-generate](https://github.com/cargo-generate/cargo-generate) template.
 
 This is a deployable "hello world" [AWS Lambda](https://aws.amazon.com/lambda/).
