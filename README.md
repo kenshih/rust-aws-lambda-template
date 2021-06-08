@@ -55,4 +55,3 @@ cargo generate --git https://github.com/kenshih/rust-aws-lambda-template --name 
 # notes
 
 - this is built using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime)
-- using [aws-sdk-rust](https://github.com/awslabs/aws-sdk-rust) in favor of [rusoto](https://github.com/rusoto/rusoto)
