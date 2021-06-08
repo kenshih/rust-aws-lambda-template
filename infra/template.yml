@@ -9,7 +9,7 @@ Parameters:
     Description: Visible name of lambda function, as it will appear in cli & aws console
 
 Resources:
-  CustomListFunction:
+  MyFunction:
     Type: 'AWS::Serverless::Function'
     Properties:
       FunctionName: !Ref FunctionName

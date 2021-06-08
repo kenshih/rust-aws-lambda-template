@@ -18,7 +18,7 @@ Then, in your new project, you can deploy your AWS Lambda like this:
 - [notes](#notes)
 
 # Overview
-[rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) is a [**cargo-generate**](https://github.com/cargo-generate/cargo-generate) template, which creates a rust project that can deploy a "hello world" [AWS Lambda](https://aws.amazon.com/lambda/) using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime).
+[rust-aws-lambda-template](https://github.com/kenshih/rust-aws-lambda-template) is a [**cargo-generate**](https://github.com/cargo-generate/cargo-generate) template, which creates a rust project that can deploy a "hello world" [AWS Lambda](https://aws.amazon.com/lambda/) using [aws-lambda-rust-runtime](https://github.com/awslabs/aws-lambda-rust-runtime). Deployment is done with [aws-sam-cli](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-command-reference.html)
 
 If you are reading this from a generated project simply overwrite this README.md with [generated.README.md](./generated.README.md) as a starting point.
 # How to use this template
@@ -51,7 +51,6 @@ cargo generate --git https://github.com/kenshih/rust-aws-lambda-template --name 
 - Supports lambda generation
 - For requests to support additional features consider opening an [issue](https://github.com/kenshih/rust-aws-lambda-template/issues)
 - TODO: Local development not supported
-- TODO: doc: tour of generated items
 
 # notes
 
